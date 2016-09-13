@@ -19,10 +19,10 @@ Yices version: 2.4.2
 
 File Description:
 =================
-    .tst and .py: s3camr benchmarks
-    .sal: SAL files
-    .yices: Yices2 files
-    .smt2: converted Yices2
+- .tst and .py: s3camr benchmarks
+- .sal: SAL files
+- .yices: Yices2 files
+- .smt2: converted Yices2
 
 
 Benchmark Description:
