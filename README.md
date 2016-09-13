@@ -51,7 +51,7 @@ Benchmark Description:
     - bench_full_prec [sat]
 
         ```
-        Full precision: 99 decimals
+        full precision: 99 decimals
         python -O ./scamr.py -f ../examples/linear/const1/const1.tst -cn  --refine model-dft --max-model-error 10 --prop-check --bmc-engine sal --incl-error --pvt-init-data 1 -p
         ```
 
