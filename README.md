@@ -12,7 +12,7 @@ points but encoded as reals.
 All floats have been truncated to only 3 decimals; termed as -
 'regular precision'
 
-S3CAMR version:
+S3CAMR branch/version: develop/0b3205e9fe5bf5de366b929c62dba7432439fad7
 SAL (sal-inf-bmc) version: 3.3
 Yices version: 2.4.2
 
