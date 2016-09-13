@@ -1,0 +1,26 @@
+(set-option :produce-models true)
+(set-logic QF_LIRA)
+
+'<,'>s/define/declare-fun/gc
+
+'<,'>s/define /let ((/gc
+'<,'>s/::bool//gc
+
+%s/real/Real/g
+%s/int/Int/g
+%s/bool/Bool/g
+%s/::/ () /gc
+
+%s/\([-]*[0-9]\+\)\/\([0-9]\+\)/(\/ \1 \2)/gc
+%s/-\([0-9]\+\)/(- \1)/gc
+
+'<,'>s/\(a_[0-9]*\)/(and \1/gc
+add corresponding ) for ands
+
+Run macro to add ) for every let
+add '(assert' at the top of the first let statement
+last let needs to be modified
+Add finishing ) for assert
+
+(check-sat)
+(get-model)

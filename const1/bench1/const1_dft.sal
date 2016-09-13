@@ -1,0 +1,171 @@
+
+
+const1_dft: CONTEXT =
+BEGIN
+
+
+CELL: TYPE = {C10, C13, C2, C3, C5, C15, C7, C4, C19, C1, C18, C17, C0, C14, C8, C16, C6, C9, C12, C11};
+
+PLANT: MODULE =
+BEGIN
+
+LOCAL
+	cell:CELL
+OUTPUT
+
+	x0:REAL,
+	x1:REAL
+INITIALIZATION
+
+	x0 IN { r : REAL | r >=  0 AND r <= 1 };
+	x1 IN { r : REAL | r >=  0 AND r <= 1 }
+TRANSITION
+[
+T_0:
+cell = C0 AND x0 + -1 <= 0 AND x1 + -1 <= 0 AND -x0 <= 0 AND -x1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C0, C16}
+[]
+T_1:
+cell = C1 AND x0 + -3*1 <= 0 AND x1 + -4*1 <= 0 AND -x0 + 2*1 <= 0 AND -x1 + 3*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C1, C11, C9}
+[]
+T_2:
+cell = C2 AND x0 + -4*1 <= 0 AND x1 + -6*1 <= 0 AND -x0 + 3*1 <= 0 AND -x1 + 5*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C2}
+[]
+T_3:
+cell = C3 AND x0 + -1 <= 0 AND x1 + -3*1 <= 0 AND -x0 <= 0 AND -x1 + 2*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C3, C7, C6}
+[]
+T_4:
+cell = C4 AND x0 + -3*1 <= 0 AND x1 + -3*1 <= 0 AND -x0 + 2*1 <= 0 AND -x1 + 2*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C4, C1, C9}
+[]
+T_5:
+cell = C5 AND x0 + -4*1 <= 0 AND x1 + -5*1 <= 0 AND -x0 + 3*1 <= 0 AND -x1 + 4*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C5, C2}
+[]
+T_6:
+cell = C6 AND x0 + -2*1 <= 0 AND x1 + -3*1 <= 0 AND -x0 + 1 <= 0 AND -x1 + 2*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C6, C1, C4, C13}
+[]
+T_7:
+cell = C7 AND x0 + -1 <= 0 AND x1 + -4*1 <= 0 AND -x0 <= 0 AND -x1 + 3*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C7, C8, C18}
+[]
+T_8:
+cell = C8 AND x0 + -1 <= 0 AND x1 + -5*1 <= 0 AND -x0 <= 0 AND -x1 + 4*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C8, C10, C18}
+[]
+T_9:
+cell = C9 AND x0 + -4*1 <= 0 AND x1 + -4*1 <= 0 AND -x0 + 3*1 <= 0 AND -x1 + 3*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C9, C5}
+[]
+T_10:
+cell = C10 AND x0 + -1 <= 0 AND x1 + -6*1 <= 0 AND -x0 <= 0 AND -x1 + 5*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C10}
+[]
+T_11:
+cell = C11 AND x0 + -3*1 <= 0 AND x1 + -5*1 <= 0 AND -x0 + 2*1 <= 0 AND -x1 + 4*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C11, C5, C17, C2}
+[]
+T_12:
+cell = C12 AND x0 + -3*1 <= 0 AND x1 + -2*1 <= 0 AND -x0 + 2*1 <= 0 AND -x1 + 1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C12, C4}
+[]
+T_13:
+cell = C13 AND x0 + -2*1 <= 0 AND x1 + -4*1 <= 0 AND -x0 + 1 <= 0 AND -x1 + 3*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C13, C1, C11, C18}
+[]
+T_14:
+cell = C14 AND x0 + -2*1 <= 0 AND x1 + -1 <= 0 AND -x0 + 1 <= 0 AND -x1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C14, C19}
+[]
+T_15:
+cell = C15 AND x0 + -2*1 <= 0 AND x1 + -6*1 <= 0 AND -x0 + 1 <= 0 AND -x1 + 5*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C15}
+[]
+T_16:
+cell = C16 AND x0 + -1 <= 0 AND x1 + -2*1 <= 0 AND -x0 <= 0 AND -x1 + 1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C16, C3, C19}
+[]
+T_17:
+cell = C17 AND x0 + -3*1 <= 0 AND x1 + -6*1 <= 0 AND -x0 + 2*1 <= 0 AND -x1 + 5*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C17}
+[]
+T_18:
+cell = C18 AND x0 + -2*1 <= 0 AND x1 + -5*1 <= 0 AND -x0 + 1 <= 0 AND -x1 + 4*1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C18, C15, C17, C11}
+[]
+T_19:
+cell = C19 AND x0 + -2*1 <= 0 AND x1 + -2*1 <= 0 AND -x0 + 1 <= 0 AND -x1 + 1 <= 0 -->
+x0' = x0 + 0.2*1;
+x1' = x1 + 0.4*1;
+cell' IN {C19, C6, C12}
+
+
+[] NOP: TRUE -->
+
+]
+END;
+
+MONITOR: MODULE =
+BEGIN
+OUTPUT
+        unsafe : BOOLEAN
+INPUT
+
+	x0:REAL,
+	x1:REAL
+INITIALIZATION
+        unsafe = FALSE
+TRANSITION
+[
+TRUE -->
+unsafe' IN {r : BOOLEAN | r <=> (x1' >= 5.0)}
+]
+END;
+system: MODULE = PLANT || MONITOR;
+
+safety : THEOREM
+system |- G(NOT unsafe);
+
+END
