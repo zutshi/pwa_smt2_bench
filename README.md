@@ -33,27 +33,35 @@ Benchmark Description:
 
     - bench_1 [sat]
 
+        ```
         regular precision
         python -O ./scamr.py -f ../examples/bball/bball.tst -cn  --refine model-dft --max-model-error 10 --prop-check --bmc-engine sal --incl-error -pmp --plots x0-x1
+        ```
 
 - const1:
     constant dynamics
 
     - bench_1 [sat]
 
+        ```
         regular precision
         python -O ./scamr.py -f ../examples/linear/const1/const1.tst -cn  --refine model-dft --max-model-error 10 --prop-check --bmc-engine sal --incl-error --pvt-init-data 1 -p
+        ```
 
     - bench_full_prec [sat]
 
+        ```
         Full precision: 99 decimals
         python -O ./scamr.py -f ../examples/linear/const1/const1.tst -cn  --refine model-dft --max-model-error 10 --prop-check --bmc-engine sal --incl-error --pvt-init-data 1 -p
+        ```
 
 - nav30:
     Navigation benchmark (instance #30)
 
     - bench_1 [missing]
 
+        ```
         regular precision
         python -O ./scamr.py -f ../examples/nav/nav30.tst -cn  --refine model-dft --max-model-error 1000 --prop-check --bmc-engine sal --incl-error --pvt-init-data 1 -p
         yices --mode=one-shot "/tmp/sal-zutshi-24978-input.yices" > "/tmp/sal-zutshi-24978-output.yices"
+        ```
