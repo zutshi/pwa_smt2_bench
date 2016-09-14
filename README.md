@@ -12,7 +12,6 @@ points but encoded as reals.
 All floats have been truncated to only 3 decimals; termed as -
 'regular precision'
 
-S3CAMR branch/version: develop/0b3205e9fe5bf5de366b929c62dba7432439fad7
 SAL (sal-inf-bmc) version: 3.3
 Yices version: 2.4.2
 
@@ -28,23 +27,25 @@ Yices version: 2.4.2
 ## Benchmark Description
 
 
-- bball1:
+- bball:
     Bouncing ball in x-y
 
     - bench_1 [sat]
 
         ```
         regular precision
+        S3CAMR branch/version: develop/0b3205e9fe5bf5de366b929c62dba7432439fad7
         python -O ./scamr.py -f ../examples/bball/bball.tst -cn  --refine model-dft --max-model-error 10 --prop-check --bmc-engine sal --incl-error -pmp --plots x0-x1
         ```
 
-- const1:
+- const:
     constant dynamics
 
     - bench_1 [sat]
 
         ```
         regular precision
+        S3CAMR branch/version: develop/0b3205e9fe5bf5de366b929c62dba7432439fad7
         python -O ./scamr.py -f ../examples/linear/const1/const1.tst -cn  --refine model-dft --max-model-error 10 --prop-check --bmc-engine sal --incl-error --pvt-init-data 1 -p
         ```
 
@@ -52,6 +53,7 @@ Yices version: 2.4.2
 
         ```
         full precision: 99 decimals
+        S3CAMR branch/version: develop/0b3205e9fe5bf5de366b929c62dba7432439fad7
         python -O ./scamr.py -f ../examples/linear/const1/const1.tst -cn  --refine model-dft --max-model-error 10 --prop-check --bmc-engine sal --incl-error --pvt-init-data 1 -p
         ```
 
@@ -64,4 +66,15 @@ Yices version: 2.4.2
         regular precision
         python -O ./scamr.py -f ../examples/nav/nav30.tst -cn  --refine model-dft --max-model-error 1000 --prop-check --bmc-engine sal --incl-error --pvt-init-data 1 -p
         yices --mode=one-shot "/tmp/sal-zutshi-24978-input.yices" > "/tmp/sal-zutshi-24978-output.yices"
+        ```
+
+- vdp:
+    van der pol oscillator
+
+    - bench_1 [sat]
+
+        ```
+        regular precision
+        S3CAMR branch/version: develop/60d2bba52838407ca5bd4e6524b40c65721fef09
+        python -O ./scamr.py -f ../examples/vdp/vanDerPol.tst -cn --refine model-dft --seed 0 --max-model-error 10 --prop-check --bmc-engine sal --incl-error
         ```
