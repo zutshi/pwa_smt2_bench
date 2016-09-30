@@ -1,11 +1,19 @@
+# Apply the transformations in sequence
+
+# Switch on insert mode to avoid line breaks
+
+# Paste at the top
 (set-option :produce-models true)
 (set-logic QF_LIRA)
 
+# First half
 '<,'>s/define/declare-fun/gc
 
+@ Second half
 '<,'>s/define /let ((/gc
 '<,'>s/::bool//gc
 
+# All of the file
 %s/real/Real/g
 %s/int/Int/g
 %s/bool/Bool/g
@@ -14,6 +22,8 @@
 %s/\([-]*[0-9]\+\)\/\([0-9]\+\)/(\/ \1 \2)/g
 %s/-\([0-9]\+\)/(- \1)/g
 
+
+# Last assert
 '<,'>s/\(a_[0-9]*\)/(and \1/gc
 add corresponding ) for ands
 

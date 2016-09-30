@@ -60,12 +60,13 @@ Yices version: 2.4.2
 - nav30:
     Navigation benchmark (instance #30)
 
-    - bench_1 [missing]
+    - bench_1 [sat]
 
         ```
         regular precision
-        python -O ./scamr.py -f ../examples/nav/nav30.tst -cn  --refine model-dft --max-model-error 1000 --prop-check --bmc-engine sal --incl-error --pvt-init-data 1 -p
-        yices --mode=one-shot "/tmp/sal-zutshi-24978-input.yices" > "/tmp/sal-zutshi-24978-output.yices"
+        ./scamr.py -f ../examples/nav/nav30.tst -cn  --refine model-dft --prop-check --incl-error --seed 0 -pmp --plots x0-x1
+        prec = 4
+        S3CAMR branch/version: develop/5db1150949773ac06089d519ab16bf5ee6b692f0
         ```
 
 - vdp:
