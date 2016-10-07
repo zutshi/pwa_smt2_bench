@@ -9,7 +9,7 @@
 # First half
 '<,'>s/define/declare-fun/gc
 
-@ Second half
+# Second half
 '<,'>s/define /let ((/gc
 '<,'>s/::bool//gc
 
@@ -25,12 +25,12 @@
 
 # Last assert
 '<,'>s/\(a_[0-9]*\)/(and \1/gc
-add corresponding ) for ands
+# add corresponding ) for ands
 
-Run macro to add ) for every let
-add '(assert' at the top of the first let statement
-last let needs to be modified
-Add finishing ) for assert
+# Run macro to add ) for every let
+# add '(assert' at the top of the first let statement
+# last let needs to be modified
+# Add finishing ) for assert
 
 (check-sat)
 (get-model)

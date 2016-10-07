@@ -69,6 +69,14 @@ Yices version: 2.4.2
         S3CAMR branch/version: develop/5db1150949773ac06089d519ab16bf5ee6b692f0
         ```
 
+    - bench_2 [UNKNOWN, suspected UNSAT]
+
+        ```
+        regular precision
+        ./scamr.py -f ../examples/nav/nav30.tst -cn  --refine model-dft --prop-check --incl-error --seed 0 --max-model-error 10 --max-paths 1000
+        S3CAMR branch/version: develop/81563ce4a2525cdd6b33afce1fbbe29dd8b6fc62
+        ```
+
 - vdp:
     van der pol oscillator
 
