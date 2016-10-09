@@ -30,7 +30,7 @@ Yices version: 2.4.2
 - bball:
     Bouncing ball in x-y
 
-    - bench_1 [sat]
+    - bench_1 [SAT]
 
         ```
         regular precision
@@ -41,7 +41,7 @@ Yices version: 2.4.2
 - const:
     constant dynamics
 
-    - bench_1 [sat]
+    - bench_1 [SAT]
 
         ```
         regular precision
@@ -49,7 +49,7 @@ Yices version: 2.4.2
         python -O ./scamr.py -f ../examples/linear/const1/const1.tst -cn  --refine model-dft --max-model-error 10 --prop-check --bmc-engine sal --incl-error --pvt-init-data 1 -p
         ```
 
-    - bench_full_prec [sat]
+    - bench_full_prec [SAT]
 
         ```
         full precision: 99 decimals
@@ -60,7 +60,7 @@ Yices version: 2.4.2
 - nav30:
     Navigation benchmark (instance #30)
 
-    - bench_1 [sat]
+    - bench_1 [SAT]
 
         ```
         regular precision
@@ -69,7 +69,7 @@ Yices version: 2.4.2
         S3CAMR branch/version: develop/5db1150949773ac06089d519ab16bf5ee6b692f0
         ```
 
-    - bench_2 [UNKNOWN, suspected UNSAT]
+    - bench_2 [SAT: took ~2 days with yices]
 
         ```
         regular precision
@@ -80,7 +80,7 @@ Yices version: 2.4.2
 - vdp:
     van der pol oscillator
 
-    - bench_1 [sat]
+    - bench_1 [SAT]
 
         ```
         regular precision
